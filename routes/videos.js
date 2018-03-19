@@ -7,7 +7,7 @@ router.get('/kids', function(req, res, next) {
 });
 
 router.get('/general', function(req, res, next) {
-  res.render('videos', {videos:true, kids:false, title: 'Videos - Cool Movies',});
+  res.render('videos', {videos:true, general:true, title: 'Videos - Cool Movies',});
 });
 
 module.exports= router;

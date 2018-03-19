@@ -1,0 +1,11 @@
+body{
+	background-image: url("../images/kids_bg.jpg");
+}
+
+h1{
+	font-family: 'ButterflyKids-Regular';
+}
+
+.navbar{
+	background-color:#77e6ff !important;
+}

@@ -1,0 +1,9 @@
+body{
+	background-image: url("../images/general_bg.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+h1,h2,p{
+	color:#27a102;
+}
