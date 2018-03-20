@@ -118,22 +118,20 @@ router.get('/general/:id', function(req, res, next) {
 		  res.render('details',{videos:true,general:true, details:true,title:'Video details - Cool Movies',movie:result[0]});
 	  }
   });
-  //res.render('videos', {videos:true, general:true, title: 'Videos - Cool Movies',});
 });
 
 router.get('/kids/:id', function(req, res, next) {
-  id= req.params.id;
-  connect.query(`SELECT * FROM movies WHERE id="${id}"`,(err,result) => {
+    id= req.params.id;
+	connect.query(`SELECT * FROM movies WHERE id="${id}"`,(err,result) => {
 	  if(err){
 		  throw err;
 		  console.log(err);
 	  }
 	  else{
 		  console.log(JSON.stringify(result));
-		  res.render('details',);
+		  res.render('details',{videos:true,kids:true, details:true, title:'Video details - Cool Movies',movie:result[0]});
 	  }
   });
-  //res.render('videos', {videos:true, general:true, title: 'Videos - Cool Movies',});
 });
 
 module.exports= router;

@@ -2,8 +2,12 @@ body{
 	background-image: url("../images/kids_bg.jpg");
 }
 
-h1{
+
+h1,h2,h3,h4,h5,p{
 	font-family: 'ButterflyKids-Regular';
+}
+
+h1{
 	margin: 5% auto;
 	text-align:center;
 }
