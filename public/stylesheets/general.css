@@ -4,12 +4,11 @@ body{
 	background-size:cover;
 }
 
-h1,h2,h5,label,p{
+h1,h2,h3,h4,h5,label,p,td{
 	color:#27a102;
 }
 
 h1{
-	font-family: 'ButterflyKids-Regular';
 	margin: 5% auto;
 	text-align:center;
 }

@@ -95,7 +95,7 @@ router.get('/general/filter', function(req, res, next) {
 				}
 				else{
 					console.log(JSON.stringify(content_result));
-					res.render('videos', {videos:true, general:true, title: 'Videos - Cool Movies', result_category:result, category:cat,result_content:content_result,host:req.hostname});
+					res.render('videos', {videos:true, general:true, title: 'Videos - Cool Movies', result_category:result, category:cat, result_content:content_result, host:req.hostname});
 				}
 			});
 		}
@@ -106,8 +106,32 @@ router.get('/general/filter', function(req, res, next) {
   }
 });
 
-router.get('/:id', function(req, res, next) {
-  res.render('videos', {videos:true, general:true, title: 'Videos - Cool Movies',});
+router.get('/general/:id', function(req, res, next) {
+  id= req.params.id;
+  connect.query(`SELECT * FROM movies WHERE id="${id}"`,(err,result) => {
+	  if(err){
+		  throw err;
+		  console.log(err);
+	  }
+	  else{
+		  console.log(JSON.stringify(result));
+		  res.render('details',{videos:true,general:true, details:true,title:'Video details - Cool Movies',movie:result[0]});
+	  }
+  });
+});
+
+router.get('/kids/:id', function(req, res, next) {
+    id= req.params.id;
+	connect.query(`SELECT * FROM movies WHERE id="${id}"`,(err,result) => {
+	  if(err){
+		  throw err;
+		  console.log(err);
+	  }
+	  else{
+		  console.log(JSON.stringify(result));
+		  res.render('details',{videos:true,kids:true, details:true, title:'Video details - Cool Movies',movie:result[0]});
+	  }
+  });
 });
 
 module.exports= router;
