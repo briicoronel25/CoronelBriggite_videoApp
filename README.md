@@ -11,3 +11,7 @@ Repostory for videoApp based on Node JS using express framework. This app use lo
 2. Run 'npm install' to install dependencies
 3. Run 'npm start' to start server
 4. Go to your browser and enter on the webapp on localhost:3000 (the port may change).
+
+# Notes
+
+Because there is not an option to create accounts, you have to make tests creating accounts in the db directly (see the accounts samples on sql script).
